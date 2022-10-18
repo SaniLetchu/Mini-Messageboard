@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  header
+    h1= title
+    p.titletext Welcome to #{title}
+  main
+    form(action='/new', method='POST')
+      p
+        | Title: 
+        input(type='text', name='title')
+        |          Message: 
+        input(type='text', name='message')
+        |          Username: 
+        input(type='text', name='username')
+      input(type='submit', value='Submit')

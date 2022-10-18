@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  header
+    h1= title
+    p.titletext Welcome to #{title}
+  main
+    a(href="/new") Join the chat!
+    each message in messages 
+      div.message-card 
+        h2= message.title
+        p.description= message.message
+        footer 
+          p.username= message.username
+          p.date= message.date
